@@ -1,0 +1,42 @@
+body {
+  font-family: Arial;
+  background-color: #f2f2f2;
+}
+
+h3 {
+  color: darkblue;
+  text-align: center;
+}
+
+ul {
+  background-color: white;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+li {
+  margin: 10px 0;
+}
+
+ol {
+  color: #333;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:hover {
+  background-color: darkblue;
+}
