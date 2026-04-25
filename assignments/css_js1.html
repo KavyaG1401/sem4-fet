@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Resume</title>
 
+<style>
+  body {
+    font-family: Arial;
+    background-color: #f2f2f2;
+  }
+
+  .box {
+    background-color: white;
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  h2 {
+    color: darkblue;
+  }
+
+  h3 {
+    color: black;
+    border-bottom: 1px solid gray;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 8px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 8px 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: darkgreen;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h2 id="name">Kavya</h2>
+
+    <p>I am a Second Year CSE student at MITE.</p>
+
+    <h3>Education</h3>
+    <p>B.E in Computer Science Engineering</p>
+    <p>Mangalore Institute of Technology and Engineering (MITE)</p>
+    <p>2nd Year</p>
+
+    <button onclick="changeName()">Change Name</button>
+
+    <br>
+
+    <a href="https://KavyaG1401.github.io/sem4-fet/">
+      Go to Home Page
+    </a>
+
+  </div>
+
+  <script>
+    function changeName() {
+      var newName = prompt(
+        "Enter new name:",
+        document.getElementById("name").innerHTML
+      );
+
+      if (newName !== null && newName.trim() !== "") {
+        document.getElementById("name").innerHTML = newName;
+        alert("Name updated successfully to " + newName);
+      } else {
+        alert("Name not changed!");
+      }
+    }
+  </script>
+
+</body>
+</html>
