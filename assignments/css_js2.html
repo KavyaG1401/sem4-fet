@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Resume</title>
+
+<style>
+  body {
+    font-family: Arial;
+    background-color: #f2f2f2;
+  }
+
+  .box {
+    background-color: white;
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  h2 {
+    color: darkblue;
+  }
+
+  h3 {
+    color: black;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+  }
+
+  input {
+    padding: 8px;
+    margin-top: 10px;
+    width: 60%;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: darkgreen;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 8px;
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+  <h2 id="name">Kavya</h2>
+
+  <p>I am a Second Year CSE student at MITE.</p>
+
+  <!-- Name Update Section -->
+  <input type="text" id="nameInput" placeholder="Enter new name">
+  <br>
+  <button onclick="changeName()">Update Name</button>
+  <p id="errorMsg" class="error"></p>
+
+  <!-- Education -->
+  <h3>Education</h3>
+  <p>B.E in Computer Science Engineering</p>
+  <p>Mangalore Institute of Technology and Engineering (MITE)</p>
+  <p>2nd Year</p>
+
+  <!-- Skills -->
+  <h3>Skills</h3>
+  <p>C Programming, Java, HTML, CSS, JavaScript</p>
+
+  <!-- Projects -->
+  <h3>Projects</h3>
+  <p>Simple Resume Website</p>
+
+  <!-- Contact -->
+  <h3>Contact</h3>
+  <p>Email: kavya@example.com</p>
+
+  <a href="https://KavyaG1401.github.io/sem4-fet/">
+    Go to Home Page
+  </a>
+
+</div>
+
+<script>
+function changeName() {
+  var newName = document.getElementById("nameInput").value;
+  var errorMsg = document.getElementById("errorMsg");
+
+  newName = newName.trim();
+  errorMsg.innerText = "";
+
+  // Empty check
+  if (newName === "") {
+    errorMsg.innerText = "Name cannot be empty!";
+    return;
+  }
+
+  // Length validation
+  if (newName.length < 3 || newName.length > 30) {
+    errorMsg.innerText = "Name must be between 3 and 30 characters!";
+    return;
+  }
+
+  // Only letters and spaces
+  var namePattern = /^[A-Za-z ]+$/;
+  if (!namePattern.test(newName)) {
+    errorMsg.innerText = "Only alphabets and spaces allowed!";
+    return;
+  }
+
+  // Update name safely
+  document.getElementById("name").innerText = newName;
+
+  alert("Name updated successfully!");
+  document.getElementById("nameInput").value = "";
+}
+</script>
+
+</body>
+</html>
