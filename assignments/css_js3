@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Contact Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #dbeafe, #f0f9ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 400px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1d4ed8;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .option-box {
+            margin-bottom: 15px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background: #1e40af;
+        }
+
+        .result-box {
+            background: #eff6ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .result-box p {
+            margin: 8px 0;
+        }
+
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Hire Me Form</h2>
+
+        <form id="portfolioForm">
+
+            <label>Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>Email Address:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Service Needed:</label>
+            <select id="service">
+                <option>Frontend Development</option>
+                <option>Backend Development</option>
+                <option>Full Stack Project</option>
+            </select>
+
+            <div class="option-box">
+                <label><strong>Preferred Contact:</strong></label><br><br>
+
+                <input type="radio" name="contact" value="Email" required>
+                <label>Email</label>
+
+                <input type="radio" name="contact" value="Phone">
+                <label>Phone</label>
+            </div>
+
+            <div class="option-box">
+                <label><strong>Skills Required:</strong></label><br><br>
+
+                <input type="checkbox" value="HTML & CSS"> HTML & CSS<br>
+
+                <input type="checkbox" value="JavaScript"> JavaScript<br>
+
+                <input type="checkbox" value="React JS"> React JS
+            </div>
+
+            <label>Project Details:</label>
+            <textarea rows="4" id="message"
+                placeholder="Describe your project..." required></textarea>
+
+            <input type="submit" value="Send Request">
+
+        </form>
+
+        <div class="result-box" id="resultBox">
+
+            <p><b>Name:</b> <span id="showName"></span></p>
+
+            <p><b>Email:</b> <span id="showEmail"></span></p>
+
+            <p><b>Service:</b> <span id="showService"></span></p>
+
+            <p><b>Preferred Contact:</b> <span id="showContact"></span></p>
+
+            <p><b>Project Details:</b> <span id="showMessage"></span></p>
+
+        </div>
+
+        <a class="home-link" href="#">
+            Back to Homepage
+        </a>
+
+    </div>
+
+    <script>
+
+        const form = document.getElementById("portfolioForm");
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            document.getElementById("showName").innerText =
+                document.getElementById("name").value;
+
+            document.getElementById("showEmail").innerText =
+                document.getElementById("email").value;
+
+            document.getElementById("showService").innerText =
+                document.getElementById("service").value;
+
+            document.getElementById("showMessage").innerText =
+                document.getElementById("message").value;
+
+            let contact =
+                document.querySelector('input[name="contact"]:checked').value;
+
+            document.getElementById("showContact").innerText = contact;
+
+            document.getElementById("resultBox").style.display = "block";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
