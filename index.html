@@ -1,47 +1,221 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Centered Paragraph</title>
-  <style>
-    body {
-      background-color: lavender;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
+<html lang="en">
 
-    a {
-      display: block;       /* each link on new line */
-      margin: 5px 0;        /* spacing between links */
-      text-decoration: none;
-      color: blue;
-    }
-  </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front End Technologies</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: darkblue;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        h2 {
+            color: darkred;
+            border-bottom: 2px solid lightgray;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        .assignment {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 5px solid steelblue;
+            border-radius: 8px;
+        }
+
+        .assignment h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: crimson;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: gray;
+            font-size: 14px;
+        }
+
+    </style>
 </head>
+
 <body>
 
-  <div>
-    <h1>Hello World</h1>
-    <p>My name is Kavya.</p>
+    <div class="container">
 
-    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/one.html">one.html</a>
-    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/two.html">two.html</a>
-    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/three.html">three.html</a>
-    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/four.html">four.html</a>
-    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/five.html">five.html</a>
-     <a href="https://KavyaG1401.github.io/sem4-fet/assignments/six.html">six.html</a>
-     <a href="https://KavyaG1401.github.io/sem4-fet/assignments/seven.html">seven.html</a>
-    <a href ="https://KavyaG1401.github.io/sem4-fet/assignments/css1.html">css1.html</a>
-    <a href ="https://KavyaG1401.github.io/sem4-fet/assignments/css2.html">css2.html</a>
-    <a href ="https://KavyaG1401.github.io/sem4-fet/assignments/css_js1.html">css_js1.html</a>
-     <a href ="https://KavyaG1401.github.io/sem4-fet/assignments/css_js2.html">css_js2.html</a>
-    <a href ="https://KavyaG1401.github.io/sem4-fet/assignments/css_js3.html">css_js3.html</a>
-     <a href ="https://KavyaG1401.github.io/sem4-fet/assignments/z_index.html">z_index.html</a>
-    
-  </div>
+        <h1>Front End Technologies</h1>
+
+        <div class="info">
+            <p><strong>Name:</strong> Kavya G</p>
+            <p><strong>USN:</strong> 4MT24CS088</p>
+            <p>
+                Welcome to my Front End Technologies webpage. 
+                This page contains all the assignments and mini projects 
+                completed during Semester 4. Click on the links below 
+                to view each assignment.
+            </p>
+        </div>
+
+        <h2>Assignments</h2>
+
+        <div class="assignment">
+            <h3>Assignment 1 : Basic HTML Pages</h3>
+
+            <ul>
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/one.html">
+                        one.html
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/two.html">
+                        two.html
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/three.html">
+                        three.html
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/four.html">
+                        four.html
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/five.html">
+                        five.html
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/six.html">
+                        six.html
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/seven.html">
+                        seven.html
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="assignment">
+            <h3>Assignment 2 : CSS Programs</h3>
+
+            <ul>
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/css1.html">
+                        css1.html
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/css2.html">
+                        css2.html
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="assignment">
+            <h3>Assignment 3 : CSS and JavaScript</h3>
+
+            <ul>
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/css_js1.html">
+                        css_js1.html
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/css_js2.html">
+                        css_js2.html
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/css_js3.html">
+                        css_js3.html
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="assignment">
+            <h3>Assignment 4 : Z-Index Program</h3>
+
+            <ul>
+                <li>
+                    <a href="https://KavyaG1401.github.io/sem4-fet/assignments/z_index.html">
+                        z_index.html
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            © 2026 Kavya G | Front End Technologies Lab
+        </footer>
+
+    </div>
 
 </body>
+
 </html>
