@@ -1,110 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loop Programs</title>
+    <title>Layer Switcher with Loops</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #eef2f7;
+            font-family: Arial;
+            background-color: #eaeaea;
             padding: 30px;
         }
 
-        .container {
-            width: 700px;
-            margin: auto;
-            background-color: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px gray;
-        }
-
         h1 {
-            text-align: center;
+            margin-bottom: 20px;
             color: darkblue;
-        }
-
-        .box {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f8f8f8;
-            border-left: 5px solid steelblue;
-            border-radius: 8px;
         }
 
         button {
             padding: 10px 16px;
-            background-color: darkblue;
-            color: white;
-            border: none;
-            border-radius: 5px;
+            margin-right: 8px;
             cursor: pointer;
+            font-size: 14px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
         }
 
         button:hover {
-            background-color: royalblue;
+            background-color: gray;
         }
 
-        p {
-            font-size: 18px;
-        }
-
-        .home {
-            margin-top: 30px;
+        .box {
+            width: 350px;
+            height: 180px;
+            border: 2px solid black;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
             text-align: center;
+            line-height: 180px;
+            position: absolute;
+            border-radius: 10px;
         }
 
-        .home a {
-            text-decoration: none;
+        #red {
+            background-color: crimson;
+            top: 180px;
+            left: 180px;
+            z-index: 1;
         }
+
+        #blue {
+            background-color: royalblue;
+            top: 180px;
+            left: 180px;
+            z-index: 0;
+        }
+
+        #green {
+            background-color: seagreen;
+            top: 180px;
+            left: 180px;
+            z-index: -1;
+        }
+
+        .home-btn {
+            margin-top: 450px;
+            padding: 10px 18px;
+            font-size: 15px;
+        }
+
     </style>
-
-    <!-- External JavaScript File -->
-    <script src="script.js"></script>
-
 </head>
 
 <body>
 
-    <div class="container">
+    <h1>Layer Switcher with Loops</h1>
 
-        <h1>While Loop and Do While Loop</h1>
+    <button onclick="showRed()">Show Red</button>
 
-        <!-- While Loop Section -->
-        <div class="box">
+    <button onclick="showBlue()">Show Blue</button>
 
-            <h2>While Loop</h2>
+    <button onclick="showGreen()">Show Green</button>
 
-            <button onclick="showWhile()">Run While Loop</button>
+    <button onclick="autoSwitch()">Auto Switch</button>
 
-            <p id="whileResult"></p>
+    <br><br>
 
-        </div>
-
-        <!-- Do While Loop Section -->
-        <div class="box">
-
-            <h2>Do While Loop</h2>
-
-            <button onclick="showDoWhile()">Run Do While Loop</button>
-
-            <p id="doResult"></p>
-
-        </div>
-
-        <!-- Homepage Link -->
-        <div class="home">
-
-            <a href="https://KavyaG1401.github.io/sem4-fet/">
-                <button>Back to Homepage</button>
-            </a>
-
-        </div>
-
+    <div id="red" class="box">
+        RED LAYER
     </div>
+
+    <div id="blue" class="box">
+        BLUE LAYER
+    </div>
+
+    <div id="green" class="box">
+        GREEN LAYER
+    </div>
+
+    <br><br>
+
+    <a href="https://KavyaG1401.github.io/sem4-fet/">
+        <button class="home-btn">Back to Homepage</button>
+    </a>
+
+    <!-- External JavaScript File -->
+    <script src="loops.js"></script>
 
 </body>
 
